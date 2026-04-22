@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "TestConsole",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/Dictator.TestConsole/bin/Debug/net10.0/Dictator.TestConsole.dll",
+            "args": ["test_data"],
+            "cwd": "${workspaceFolder}/Dictator.TestConsole",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        }
+    ]
+}
