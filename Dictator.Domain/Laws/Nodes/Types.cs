@@ -1,6 +1,10 @@
-namespace Dictator.Domain.Laws.Bill
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Dictator.Domain.Laws
 {
-    public enum BillLogicOperator
+    public enum LogicOperator
     {
         And,
         Or,
@@ -86,7 +90,6 @@ namespace Dictator.Domain.Laws.Bill
     {
         public string Value { get; }
         public int Severity { get; }
- 
         public RestrictionType(string value, int severity)
         {
             Value = value;
@@ -155,4 +158,129 @@ namespace Dictator.Domain.Laws.Bill
     }
 
 
+
+
+
+
+    public abstract class Node 
+    {
+        public string Type { get; }
+
+        public Node(string nodeType)
+        {
+            Type = nodeType;
+        }
+
+        public abstract Node Clone();
+    }
+
+    public class LogicOperatorNode : Node
+    {
+        public LogicOperator Operator { get; }
+
+        public LogicOperatorNode(LogicOperator @operator) : base(nameof(LogicOperatorNode))
+        {
+            Operator = @operator;
+        }
+
+        public override Node Clone()
+        {
+            return new LogicOperatorNode(Operator);
+        }
+    }
+
+    public class SubjectNode : Node
+    {
+        public SubjectType Subject { get; }
+        public bool IsEmpty => Subject.Value == "empty";
+        public static readonly SubjectNode Empty = new SubjectNode(new SubjectType("empty"));
+
+        public SubjectNode(SubjectType subject) : base(nameof(SubjectNode))
+        {
+            Subject = subject;
+        }
+
+        public override Node Clone()
+        {
+            return new SubjectNode(new SubjectType(Subject.Value));
+        }
+    }
+
+    public class ActionNode : Node
+    {
+        public ActionType Action { get; }
+        public bool IsEmpty => Action.Value == "empty";
+        public static readonly ActionNode Empty = new ActionNode(new ActionType("empty"));
+        public ActionNode(ActionType action) : base(nameof(ActionNode))
+        {
+            Action = action;
+        }
+
+        public override Node Clone()
+        {
+            return new ActionNode(new ActionType(Action.Value));
+        }
+    }
+
+    public class SubjectGroupNode : Node
+    {
+        public IReadOnlyList<Node> Children { get; }
+        public SubjectGroupNode(IReadOnlyList<Node> children) : base(nameof(SubjectGroupNode))
+        {
+            Children = children ?? new List<Node>();
+        }
+
+        public override Node Clone()
+        {
+            return new SubjectGroupNode(Children.Select(c => c.Clone()).ToList());
+        }
+    }
+
+    public class RestrictionNode : Node
+    {
+        public RestrictionType Restriction { get; }
+        public bool IsEmpty => Restriction.Value == "empty";
+        public static readonly RestrictionNode Empty = new RestrictionNode(new RestrictionType("empty", -1));
+
+        public RestrictionNode(RestrictionType restriction) : base(nameof(RestrictionNode))
+        {
+            Restriction = restriction;
+        }
+
+        public override Node Clone()
+        {
+            return new RestrictionNode(new RestrictionType(Restriction.Value, Restriction.Severity));
+        }
+    }
+
+    public class CircumstanceGroupNode : Node
+    {
+        public IReadOnlyList<Node> Children { get; }
+        public CircumstanceGroupNode(IReadOnlyList<Node> children) : base(nameof(CircumstanceGroupNode))
+        {
+            Children = children ?? new List<Node>();
+        }
+
+        public override Node Clone()
+        {
+            return new CircumstanceGroupNode(Children.Select(c => c.Clone()).ToList());
+        }
+    }
+
+    public class CircumstanceNode : Node
+    {
+        public CircumstanceType Circumstance { get; }
+        public bool IsEmpty => Circumstance.Value == "empty";
+        public static readonly CircumstanceNode Empty = new CircumstanceNode(new CircumstanceType("empty"));
+
+        public CircumstanceNode(CircumstanceType circumstance) : base(nameof(CircumstanceNode))
+        {
+            Circumstance = circumstance;
+        }
+
+        public override Node Clone()
+        {
+            return new CircumstanceNode(new CircumstanceType(Circumstance.Value));
+        }
+    }
 }

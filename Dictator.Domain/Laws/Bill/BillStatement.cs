@@ -1,17 +1,17 @@
-namespace Dictator.Domain.Laws.Bill
+namespace Dictator.Domain.Laws.Bill_
 {
     public class BillStatement
     {
-        public BillSubjectGroupNode Subject { get; }
-        public BillActionNode Action { get; }
-        public BillRestrictionNode Restriction { get; }
-        public BillCircumstanceGroupNode? Circumstance { get; }
+        public SubjectGroupNode Subject { get; }
+        public ActionNode Action { get; }
+        public RestrictionNode Restriction { get; }
+        public CircumstanceGroupNode? Circumstance { get; }
 
         public BillStatement(
-            BillSubjectGroupNode subject,
-            BillActionNode action,
-            BillRestrictionNode restriction,
-            BillCircumstanceGroupNode? circumstance = null)
+            SubjectGroupNode subject,
+            ActionNode action,
+            RestrictionNode restriction,
+            CircumstanceGroupNode? circumstance = null)
         {
             Subject = subject;
             Action = action;

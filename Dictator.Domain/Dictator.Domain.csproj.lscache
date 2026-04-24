@@ -54,14 +54,23 @@ TemporaryDependencyNodeTargetIdentifier=netstandard2.1
 Laws/Bill/
  Bill.cs
  BillAmendment.cs
- BillNode.cs
  BillStatement.cs
  BillStatementDiff.cs
  DiffTypes.cs
- Types.cs
+Laws/Law/
+ Law.cs
+ LawFactory.cs
+ LawStatement.cs
+Laws/
+ Nodes/Types.cs
+ Registry/
+  BillRegistry.cs
+  LawRecord.cs
+  LawRegistry.cs
 obj/Debug/netstandard2.1/
  .NETStandard,Version=v2.1.AssemblyAttributes.cs
  Dictator.Domain.AssemblyInfo.cs
+Utils/Serd/NodeJsonConverter.cs
 
 [metadataReferences]
 ../../../../../../usr/lib/dotnet/packs/NETStandard.Library.Ref/2.1.0/ref/netstandard2.1/
@@ -186,6 +195,7 @@ obj/Debug/netstandard2.1/
  System.Xml.XmlSerializer.dll
  System.Xml.XPath.dll
  System.Xml.XPath.XDocument.dll
+<NUGET>/newtonsoft.json/13.0.4/lib/netstandard2.0/Newtonsoft.Json.dll
 
 [analyzerConfigFiles]
 obj/Debug/netstandard2.1/Dictator.Domain.GeneratedMSBuildEditorConfig.editorconfig

@@ -1,0 +1,1 @@
+doc: https://ivgeniay.github.io/dictator_game/

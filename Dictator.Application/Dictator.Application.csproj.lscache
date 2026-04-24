@@ -177,6 +177,7 @@ obj/Debug/netstandard2.1/Dictator.Application.AssemblyInfo.cs
  System.Xml.XPath.dll
  System.Xml.XPath.XDocument.dll
 ../Dictator.Domain/bin/Debug/netstandard2.1/Dictator.Domain.dll
+<NUGET>/newtonsoft.json/13.0.4/lib/netstandard2.0/Newtonsoft.Json.dll
 
 [analyzerConfigFiles]
 obj/Debug/netstandard2.1/Dictator.Application.GeneratedMSBuildEditorConfig.editorconfig

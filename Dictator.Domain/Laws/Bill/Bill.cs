@@ -1,7 +1,7 @@
-using System;
 using System.Collections.Generic;
+using System;
 
-namespace Dictator.Domain.Laws.Bill
+namespace Dictator.Domain.Laws.Bill_
 {
     public enum BillStatus
     {

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Dictator.Domain.Laws.Bill
+namespace Dictator.Domain.Laws.Bill_
 {
     public enum BillChangeDirection
     {
@@ -42,14 +42,14 @@ namespace Dictator.Domain.Laws.Bill
 
     public class BillSubjectChange
     {
-        public BillSubjectNode Previous { get; }
-        public BillSubjectNode Current { get; }
+        public SubjectNode Previous { get; }
+        public SubjectNode Current { get; }
         public BillChangeDirection Direction { get; }
         public BillChangePresence Presence { get; }
 
         private BillSubjectChange(
-            BillSubjectNode previous,
-            BillSubjectNode current,
+            SubjectNode previous,
+            SubjectNode current,
             BillChangeDirection direction,
             BillChangePresence presence)
         {
@@ -59,33 +59,33 @@ namespace Dictator.Domain.Laws.Bill
             Presence = presence;
         }
 
-        public static BillSubjectChange Added(BillSubjectNode current, BillChangeDirection direction)
+        public static BillSubjectChange Added(SubjectNode current, BillChangeDirection direction)
         {
-            return new BillSubjectChange(BillSubjectNode.Empty, current, direction, BillChangePresence.Added);
+            return new BillSubjectChange(SubjectNode.Empty, current, direction, BillChangePresence.Added);
         }
 
-        public static BillSubjectChange Removed(BillSubjectNode previous, BillChangeDirection direction)
+        public static BillSubjectChange Removed(SubjectNode previous, BillChangeDirection direction)
         {
-            return new BillSubjectChange(previous, BillSubjectNode.Empty, direction, BillChangePresence.Removed);
+            return new BillSubjectChange(previous, SubjectNode.Empty, direction, BillChangePresence.Removed);
         }
 
-        public static BillSubjectChange Modified(BillSubjectNode previous, BillSubjectNode current, BillChangeDirection direction)
+        public static BillSubjectChange Modified(SubjectNode previous, SubjectNode current, BillChangeDirection direction)
         {
             return new BillSubjectChange(previous, current, direction, BillChangePresence.Modified);
         }
 
-        public static BillSubjectChange NotModified = new BillSubjectChange(BillSubjectNode.Empty, BillSubjectNode.Empty, BillChangeDirection.Unchanged, BillChangePresence.NotModified);
+        public static BillSubjectChange NotModified = new BillSubjectChange(SubjectNode.Empty, SubjectNode.Empty, BillChangeDirection.Unchanged, BillChangePresence.NotModified);
     }
 
     public class BillActionChange
     {
-        public BillActionNode Previous { get; }
-        public BillActionNode Current { get; }
+        public ActionNode Previous { get; }
+        public ActionNode Current { get; }
         public BillChangePresence Presence { get; }
 
         private BillActionChange(
-            BillActionNode previous,
-            BillActionNode current,
+            ActionNode previous,
+            ActionNode current,
             BillChangePresence presence)
         {
             Previous = previous;
@@ -94,11 +94,11 @@ namespace Dictator.Domain.Laws.Bill
         }
 
         public static readonly BillActionChange NotModified = new BillActionChange(
-            BillActionNode.Empty, 
-            BillActionNode.Empty, 
+            ActionNode.Empty, 
+            ActionNode.Empty, 
             BillChangePresence.NotModified);
 
-        public static BillActionChange Modified(BillActionNode previous, BillActionNode current)
+        public static BillActionChange Modified(ActionNode previous, ActionNode current)
         {
             return new BillActionChange(previous, current, BillChangePresence.Modified);
         }
@@ -106,14 +106,14 @@ namespace Dictator.Domain.Laws.Bill
 
     public class BillRestrictionChange
     {
-        public BillRestrictionNode Previous { get; }
-        public BillRestrictionNode Current { get; }
+        public RestrictionNode Previous { get; }
+        public RestrictionNode Current { get; }
         public BillChangeDirection Direction { get; }
         public double Delta { get; }
 
         private BillRestrictionChange(
-            BillRestrictionNode previous,
-            BillRestrictionNode current,
+            RestrictionNode previous,
+            RestrictionNode current,
             BillChangeDirection direction,
             double delta)
         {
@@ -124,8 +124,8 @@ namespace Dictator.Domain.Laws.Bill
         }
 
         public static BillRestrictionChange Create(
-            BillRestrictionNode previous,
-            BillRestrictionNode current,
+            RestrictionNode previous,
+            RestrictionNode current,
             BillChangeDirection direction,
             double delta)
         {
@@ -135,14 +135,14 @@ namespace Dictator.Domain.Laws.Bill
 
     public class BillCircumstanceChange
     {
-        public BillCircumstanceNode Previous { get; }
-        public BillCircumstanceNode Current { get; }
+        public CircumstanceNode Previous { get; }
+        public CircumstanceNode Current { get; }
         public BillChangeDirection Direction { get; }
         public BillChangePresence Presence { get; }
 
         private BillCircumstanceChange(
-            BillCircumstanceNode previous,
-            BillCircumstanceNode current,
+            CircumstanceNode previous,
+            CircumstanceNode current,
             BillChangeDirection direction,
             BillChangePresence presence)
         {
@@ -152,14 +152,14 @@ namespace Dictator.Domain.Laws.Bill
             Presence = presence;
         }
 
-        public static BillCircumstanceChange Added(BillCircumstanceNode current, BillChangeDirection direction)
+        public static BillCircumstanceChange Added(CircumstanceNode current, BillChangeDirection direction)
         {
-            return new BillCircumstanceChange(BillCircumstanceNode.Empty, current, direction, BillChangePresence.Added);
+            return new BillCircumstanceChange(CircumstanceNode.Empty, current, direction, BillChangePresence.Added);
         }
 
-        public static BillCircumstanceChange Removed(BillCircumstanceNode previous, BillChangeDirection direction)
+        public static BillCircumstanceChange Removed(CircumstanceNode previous, BillChangeDirection direction)
         {
-            return new BillCircumstanceChange(previous, BillCircumstanceNode.Empty, direction, BillChangePresence.Removed);
+            return new BillCircumstanceChange(previous, CircumstanceNode.Empty, direction, BillChangePresence.Removed);
         }
     }
 

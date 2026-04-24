@@ -1,5 +1,8 @@
-namespace Dictator.Domain.Laws.Bill
+namespace Dictator.Domain.Laws.Bill_
 {
+    /// <summary>
+    /// Поправка к законопроекту
+    /// </summary>
     public class BillAmendment
     {
         public long CreatedAtTick { get; }

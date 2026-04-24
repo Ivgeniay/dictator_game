@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Dictator.Domain.Laws.Bill
+namespace Dictator.Domain.Laws.Bill_
 {
     public static class BillStatementDiff
     {
@@ -44,8 +44,8 @@ namespace Dictator.Domain.Laws.Bill
         }
 
         private static BillRestrictionChange CompareRestriction(
-            BillRestrictionNode previous,
-            BillRestrictionNode current)
+            RestrictionNode previous,
+            RestrictionNode current)
         {
             double delta = current.Restriction.Severity - previous.Restriction.Severity;
 
@@ -59,8 +59,8 @@ namespace Dictator.Domain.Laws.Bill
         }
 
         private static IReadOnlyList<BillSubjectChange> CompareSubjects(
-            BillSubjectGroupNode previous,
-            BillSubjectGroupNode current,
+            SubjectGroupNode previous,
+            SubjectGroupNode current,
             bool isRestrictiveContext)
         {
             var changes = new List<BillSubjectChange>();
@@ -119,8 +119,8 @@ namespace Dictator.Domain.Laws.Bill
         }
 
         private static IReadOnlyList<BillCircumstanceChange> CompareCircumstances(
-            BillCircumstanceGroupNode? previous,
-            BillCircumstanceGroupNode? current,
+            CircumstanceGroupNode? previous,
+            CircumstanceGroupNode? current,
             bool isRestrictiveContext)
         {
             var changes = new List<BillCircumstanceChange>();
@@ -130,11 +130,11 @@ namespace Dictator.Domain.Laws.Bill
 
             var previousCircumstances = previous != null
                 ? ExtractCircumstances(previous)
-                : new List<BillCircumstanceNode>();
+                : new List<CircumstanceNode>();
 
             var currentCircumstances = current != null
                 ? ExtractCircumstances(current)
-                : new List<BillCircumstanceNode>();
+                : new List<CircumstanceNode>();
 
             foreach (var circumstance in currentCircumstances.Where(c => !c.IsEmpty))
             {
@@ -164,8 +164,8 @@ namespace Dictator.Domain.Laws.Bill
         }
 
         private static BillActionChange CompareAction(
-            BillActionNode previous,
-            BillActionNode current)
+            ActionNode previous,
+            ActionNode current)
         {
             if (previous.Action.Equals(current.Action))
                 return BillActionChange.NotModified;
@@ -173,17 +173,17 @@ namespace Dictator.Domain.Laws.Bill
             return BillActionChange.Modified(previous, current);
 }
 
-        private static List<BillSubjectNode> ExtractSubjects(BillSubjectGroupNode group)
+        private static List<SubjectNode> ExtractSubjects(SubjectGroupNode group)
         {
             return group.Children
-                .OfType<BillSubjectNode>()
+                .OfType<SubjectNode>()
                 .ToList();
         }
 
-        private static List<BillCircumstanceNode> ExtractCircumstances(BillCircumstanceGroupNode group)
+        private static List<CircumstanceNode> ExtractCircumstances(CircumstanceGroupNode group)
         {
             return group.Children
-                .OfType<BillCircumstanceNode>()
+                .OfType<CircumstanceNode>()
                 .ToList();
         }
 
