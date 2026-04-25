@@ -1,16 +1,16 @@
-using System;
-using Dictator.Domain.Laws;
-using Newtonsoft.Json;
+using Dictator.Domain.Utils;
 using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
+using System;
 
 namespace Dictator.Domain.Utils.Serd
 {
-    public class NodeJsonConverter : JsonConverter<Node>
+    public class StringTypeJsonConverter : JsonConverter<StringType>
     {
-        public override Node ReadJson(
+        public override StringType ReadJson(
             JsonReader reader,
             Type objectType,
-            Node existingValue,
+            StringType existingValue,
             bool hasExistingValue,
             JsonSerializer serializer)
         {
@@ -20,17 +20,18 @@ namespace Dictator.Domain.Utils.Serd
             if (string.IsNullOrEmpty(typeName))
                 throw new JsonSerializationException("Поле Type отсутствует или пустое.");
 
-            var type = typeof(Node).Assembly.GetType(typeName);
+            var type = typeof(StringType).Assembly.GetType(typeName);
 
             if (type == null)
                 throw new JsonSerializationException($"Тип не найден: {typeName}");
 
-            if (!typeof(Node).IsAssignableFrom(type))
-                throw new JsonSerializationException($"Тип {typeName} не является наследником Node.");
+            if (!typeof(StringType).IsAssignableFrom(type))
+                throw new JsonSerializationException($"Тип {typeName} не является наследником StringType.");
 
-            return (Node)jo.ToObject(type, serializer);
+            return (StringType)jo.ToObject(type, serializer);
         }
-        public override void WriteJson(JsonWriter writer, Node value, JsonSerializer serializer)
+
+        public override void WriteJson(JsonWriter writer, StringType value, JsonSerializer serializer)
         {
             var jo = JObject.FromObject(value, serializer);
             jo.WriteTo(writer);

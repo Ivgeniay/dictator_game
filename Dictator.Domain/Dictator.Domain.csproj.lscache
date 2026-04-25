@@ -70,7 +70,20 @@ Laws/
 obj/Debug/netstandard2.1/
  .NETStandard,Version=v2.1.AssemblyAttributes.cs
  Dictator.Domain.AssemblyInfo.cs
-Utils/Serd/NodeJsonConverter.cs
+Shared/
+ Constants.cs
+ LegalTerms/
+  ActionType.cs
+  CircumstanceType.cs
+  RestrictionType.cs
+  SubjectType.cs
+Utils/Masks/
+ DynamicMask.cs
+ HierarchicalMask.cs
+Utils/Serd/
+ NodeJsonConverter.cs
+ StringTypeJsonConverter.cs
+Utils/StringType.cs
 
 [metadataReferences]
 ../../../../../../usr/lib/dotnet/packs/NETStandard.Library.Ref/2.1.0/ref/netstandard2.1/

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Dictator.Domain.Shared.LegalTerms;
 
 namespace Dictator.Domain.Laws.Bill_
 {
@@ -68,12 +69,12 @@ namespace Dictator.Domain.Laws.Bill_
             var previousSubjects = ExtractSubjects(previous);
             var currentSubjects = ExtractSubjects(current);
 
-            bool previousHasAll = previousSubjects.Any(s => s.Subject.Equals(SubjectType.All));
-            bool currentHasAll = currentSubjects.Any(s => s.Subject.Equals(SubjectType.All));
+            bool previousHasAll = previousSubjects.Any(s => s.Subject.Equals(SubjectType.People));
+            bool currentHasAll = currentSubjects.Any(s => s.Subject.Equals(SubjectType.People));
 
             if (!previousHasAll && currentHasAll)
             {
-                var allNode = currentSubjects.First(s => s.Subject.Equals(SubjectType.All));
+                var allNode = currentSubjects.First(s => s.Subject.Equals(SubjectType.People));
                 var direction = isRestrictiveContext
                     ? BillChangeDirection.Stricter
                     : BillChangeDirection.Softer;
@@ -83,7 +84,7 @@ namespace Dictator.Domain.Laws.Bill_
 
             if (previousHasAll && !currentHasAll)
             {
-                var allNode = previousSubjects.First(s => s.Subject.Equals(SubjectType.All));
+                var allNode = previousSubjects.First(s => s.Subject.Equals(SubjectType.People));
                 var direction = isRestrictiveContext
                     ? BillChangeDirection.Softer
                     : BillChangeDirection.Stricter;
@@ -91,7 +92,7 @@ namespace Dictator.Domain.Laws.Bill_
                 return changes;
             }
 
-            foreach (var subject in currentSubjects.Where(s => !s.Subject.Equals(SubjectType.All)))
+            foreach (var subject in currentSubjects.Where(s => !s.Subject.Equals(SubjectType.People)))
             {
                 var match = previousSubjects.FirstOrDefault(s => s.Subject.Equals(subject.Subject));
                 if (match == null)
@@ -103,7 +104,7 @@ namespace Dictator.Domain.Laws.Bill_
                 }
             }
 
-            foreach (var subject in previousSubjects.Where(s => !s.Subject.Equals(SubjectType.All)))
+            foreach (var subject in previousSubjects.Where(s => !s.Subject.Equals(SubjectType.People)))
             {
                 var match = currentSubjects.FirstOrDefault(s => s.Subject.Equals(subject.Subject));
                 if (match == null)

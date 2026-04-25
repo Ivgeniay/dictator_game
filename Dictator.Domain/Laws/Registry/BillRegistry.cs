@@ -15,7 +15,10 @@ namespace Dictator.Domain.Laws.Registry
 
         private static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
         {
-            Converters = { new NodeJsonConverter() },
+            Converters = { 
+                new NodeJsonConverter(),
+                new StringTypeJsonConverter(),
+                },
             Formatting = Formatting.Indented
         };
 
