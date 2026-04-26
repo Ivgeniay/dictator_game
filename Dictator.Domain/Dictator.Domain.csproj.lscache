@@ -51,6 +51,19 @@ TemporaryDependencyNodeTargetIdentifier=netstandard2.1
 /warnaserror+:NU1605
 
 [sourceFiles]
+Actors/Influence/
+ ActorInfluence.cs
+ PersonInfluence.cs
+Actors/Relations/
+ Group/ActorRelation.cs
+ Personal/
+  Emotion.cs
+  PersonRelation.cs
+  Sin.cs
+Actors/Types/
+ Actor.cs
+ Dictator.cs
+ Person.cs
 Laws/Bill/
  Bill.cs
  BillAmendment.cs
