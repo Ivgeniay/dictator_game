@@ -1,5 +1,7 @@
 using Dictator.Domain.Utils;
 using Dictator.Domain.Shared;
+using System.Collections.Generic;
+using Dictator.Domain.Utils.Masks;
 
 namespace Dictator.Domain.Actors.Relations.Personal
 {
@@ -73,5 +75,33 @@ namespace Dictator.Domain.Actors.Relations.Personal
         /// (Нейтральная/смешанная) разочарование
         /// </summary>
         public static readonly Emotion Disappointment = new Emotion("disappointment");
+
+        public static readonly IReadOnlyList<Emotion> AllEmotions = new List<Emotion>
+        {
+            Emotion.Admiration,
+            Emotion.Respect,
+            Emotion.Trust,
+            Emotion.Gratitude,
+            Emotion.Hope,
+            Emotion.Loyalty,
+            Emotion.Fear,
+            Emotion.Hatred,
+            Emotion.Contempt,
+            Emotion.Distrust,
+            Emotion.Anger,
+            Emotion.Resentment,
+            Emotion.Indifference,
+            Emotion.Envy,
+            Emotion.Pity,
+            Emotion.Disappointment
+        };
+    }
+
+    public static class EmotionMask
+    {
+        public static DynamicMask<Emotion> CreateDefault()
+        {
+            return new DynamicMask<Emotion>(Emotion.AllEmotions);
+        }
     }
 }

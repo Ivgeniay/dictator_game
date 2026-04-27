@@ -58,6 +58,7 @@ Actors/Relations/
  Group/ActorRelation.cs
  Personal/
   Emotion.cs
+  Loyalty.cs
   PersonRelation.cs
   Sin.cs
 Actors/Types/
@@ -93,10 +94,12 @@ Shared/
 Utils/Masks/
  DynamicMask.cs
  HierarchicalMask.cs
-Utils/Serd/
- NodeJsonConverter.cs
- StringTypeJsonConverter.cs
-Utils/StringType.cs
+Utils/
+ RandomS.cs
+ Serd/
+  NodeJsonConverter.cs
+  StringTypeJsonConverter.cs
+ StringType.cs
 
 [metadataReferences]
 ../../../../../../usr/lib/dotnet/packs/NETStandard.Library.Ref/2.1.0/ref/netstandard2.1/

@@ -27,6 +27,21 @@ namespace Dictator.Domain.Utils.Masks
             return false;
         }
 
+
+        public void Include(IEnumerable<T> values)
+        {
+            if (values.Any(e => e.Value == Constants.All.Value))
+            {
+                IncludeAll();
+                return;
+            }
+
+            foreach(var e in values)
+            {
+                Include(e);
+            }
+        }
+
         public void Include(T value)
         {
             if (_includesAll) return;
@@ -41,6 +56,21 @@ namespace Dictator.Domain.Utils.Masks
                 _entries[value] = true;
         }
 
+
+        public void Exclude(IEnumerable<T> values)
+        {
+            if (values.Any(e => e.Value == Constants.All.Value))
+            {
+                ExcludeAll();
+                return;
+            }
+
+            foreach(var e in values)
+            {
+                Exclude(e);
+            }
+        }
+        
         public void Exclude(T value)
         {
             if (value.Value == Constants.All.Value)
