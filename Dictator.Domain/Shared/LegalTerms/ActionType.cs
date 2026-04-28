@@ -3,7 +3,9 @@ using Dictator.Domain.Utils;
 namespace Dictator.Domain.Shared.LegalTerms
 {
     /// <summary>
-    /// Тип дейсвий
+    /// Типобезопасная строка представляющая действие которое закон регулирует.
+    /// Определяет что именно запрещается или разрешается - высказываться в интернете,
+    /// собираться публично, владеть имуществом и т.д.
     /// </summary>
     public class ActionType : StringType
     {

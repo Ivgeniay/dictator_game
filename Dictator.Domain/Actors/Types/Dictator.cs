@@ -2,6 +2,9 @@ using System;
 
 namespace Dictator.Domain.Actors.Types
 {
+    /// <summary>
+    /// Игровое представление игрока. Глава государства
+    /// </summary>
     public class Dictator
     {
         public Guid Id { get; }

@@ -3,7 +3,9 @@ using Dictator.Domain.Utils;
 namespace Dictator.Domain.Shared.LegalTerms
 {
     /// <summary>
-    /// Тип ограничения
+    /// Типобезопасная строка представляющая степень ограничения действия законом.
+    /// Числовой уровень строгости Severity позволяет программно сравнивать законы
+    /// и вычислять направление изменения при внесении поправок.
     /// </summary>
     public class RestrictionType : StringType
     {

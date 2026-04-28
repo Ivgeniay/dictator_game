@@ -14,4 +14,10 @@ public static class RandomS
     {
         lock (_lock) return _rnd.Next(minValue, maxValue);
     }
+
+    internal static double NextDouble()
+    {
+        lock (_lock) return _rnd.NextDouble();
+    }
+
 }

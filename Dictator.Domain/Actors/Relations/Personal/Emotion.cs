@@ -5,6 +5,11 @@ using Dictator.Domain.Utils.Masks;
 
 namespace Dictator.Domain.Actors.Relations.Personal
 {
+    /// <summary>
+    /// Типобезопасная строка представляющая эмоцию которую личность испытывает к диктатору.
+    /// Эмоции не исключают друг друга - страх и уважение могут существовать одновременно,
+    /// что типично для условий авторитарного режима.
+    /// </summary>
     public class Emotion : StringType
     {
         public Emotion() : base() { }

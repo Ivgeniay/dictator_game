@@ -3,7 +3,9 @@ using Dictator.Domain.Utils;
 namespace Dictator.Domain.Shared.LegalTerms
 {
     /// <summary>
-    /// Тип обстоятельств
+    /// Типобезопасная строка представляющая обстоятельство при котором действует закон.
+    /// Сужает область применения закона до конкретного места или контекста -
+    /// в транспорте, в общественных местах, везде.
     /// </summary>
     public class CircumstanceType : StringType
     {

@@ -1,10 +1,13 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using Dictator.Domain.Utils;
+using System.Linq;
 
 namespace Dictator.Domain.Actors.Relations.Personal
 {
+    /// <summary>
+    /// Типобезопасная строка представляющая компрометирующий факт из жизни конкретной личности.
+    /// Является материалом для шантажа, уголовного преследования и публикаций в СМИ.
+    /// </summary>
     public class Sin : StringType
     {
         public Sin() : base() { }
@@ -278,10 +281,15 @@ namespace Dictator.Domain.Actors.Relations.Personal
     }
 
 
+    /// <summary>
+    /// Фабрика для создания наборов грехов при генерации персонажей.
+    /// Предоставляет методы для получения случайных неповторяющихся грехов -
+    /// от одного до произвольного количества включительно.
+    /// Используется при инициализации депутатов, министров и олигархов и 
+    /// других персонажей в отношении которых можно проводить расследования.
+    /// </summary>
     public static class SinFactory
     {
-        
-
         public static IReadOnlyList<Sin> All() => Sin.AllSins;
 
         public static Sin Random() => Sin.AllSins[RandomS.Next(Sin.AllSins.Count)];

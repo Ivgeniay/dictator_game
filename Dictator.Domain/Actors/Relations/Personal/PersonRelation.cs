@@ -1,32 +1,30 @@
-using System.Collections.Generic;
-using System.Linq;
+using Dictator.Domain.Shared.Metrics;
 using Dictator.Domain.Utils.Masks;
 
 namespace Dictator.Domain.Actors.Relations.Personal
 {
+    /// <summary>
+    /// Личное отношение конкретного человека к диктатору.
+    /// Выражается через набор активных эмоций и числовой уровень лояльности.
+    /// Эмоции не исключают друг друга - человек может одновременно испытывать страх и уважение, что типично для условий диктатуры.
+    /// </summary>
     public class PersonRelation
     {
         private readonly DynamicMask<Emotion> _emotions;
         private readonly Loyalty _loyalty;
-        private readonly List<Sin> _sins;
 
         public Loyalty Loyalty => _loyalty;
-        public IReadOnlyList<Sin> Sins => _sins;
 
         public PersonRelation()
         {
             _emotions = EmotionMask.CreateDefault();
             _loyalty = new Loyalty();
-            _sins = new List<Sin>();
         }
 
-        public PersonRelation(DynamicMask<Emotion> emotion, Loyalty loyalty, List<Sin> sins)
+        public PersonRelation(DynamicMask<Emotion> emotions, Loyalty loyalty)
         {
-            _emotions = EmotionMask.CreateDefault();
-            _emotions.Include(emotion.GetIncluded());
-            _emotions.Exclude(emotion.GetExcluded());
-            _loyalty = new Loyalty();
-            _sins = new List<Sin>();
+            _emotions = emotions;
+            _loyalty = loyalty;
         }
 
         public void ApplyEmotion(Emotion emotion)
@@ -36,7 +34,7 @@ namespace Dictator.Domain.Actors.Relations.Personal
 
         public void ApplyRandomEmotion()
         {
-            Emotion emotion = Emotion.AllEmotions[RandomS.Next(Emotion.AllEmotions.Count())];
+            Emotion emotion = Emotion.AllEmotions[RandomS.Next(Emotion.AllEmotions.Count)];
             _emotions.ExcludeAll();
             _emotions.Include(emotion);
         }
@@ -51,7 +49,7 @@ namespace Dictator.Domain.Actors.Relations.Personal
             return _emotions.Matches(emotion);
         }
 
-        public IReadOnlyCollection<Emotion> GetActiveEmotions()
+        public System.Collections.Generic.IReadOnlyCollection<Emotion> GetActiveEmotions()
         {
             return _emotions.GetIncluded();
         }
@@ -69,28 +67,6 @@ namespace Dictator.Domain.Actors.Relations.Personal
         public void SetLoyalty(sbyte value)
         {
             _loyalty.Set(value);
-        }
-
-        public void AddSin(Sin sin)
-        {
-            if (!_sins.Contains(sin))
-                _sins.Add(sin);
-        }
-
-        public void AddSins(IEnumerable<Sin> sins)
-        {
-            foreach (var sin in sins)
-                AddSin(sin);
-        }
-
-        public void RemoveSin(Sin sin)
-        {
-            _sins.Remove(sin);
-        }
-
-        public bool HasSin(Sin sin)
-        {
-            return _sins.Contains(sin);
         }
     }
 }

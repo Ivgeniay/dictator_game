@@ -54,17 +54,27 @@ TemporaryDependencyNodeTargetIdentifier=netstandard2.1
 Actors/Influence/
  ActorInfluence.cs
  PersonInfluence.cs
-Actors/Relations/
- Group/ActorRelation.cs
- Personal/
-  Emotion.cs
-  Loyalty.cs
-  PersonRelation.cs
-  Sin.cs
+Actors/Relations/Group/
+ ActorRelation.cs
+ LoyaltyBasis.cs
+Actors/Relations/Personal/
+ Emotion.cs
+ Investigation.cs
+ PersonRelation.cs
+ Sin.cs
 Actors/Types/
  Actor.cs
  Dictator.cs
+ Organization.cs
+ Organizations/
+  BusinessOrganization.cs
+  MediaOrganization.cs
+  MilitaryOrganization.cs
+  NgoOrganization.cs
+  PoliceOrganization.cs
+  ProsecutionOrganization.cs
  Person.cs
+ State.cs
 Laws/Bill/
  Bill.cs
  BillAmendment.cs
@@ -91,6 +101,10 @@ Shared/
   CircumstanceType.cs
   RestrictionType.cs
   SubjectType.cs
+ Metrics/
+  CorruptionLevel.cs
+  Loyalty.cs
+System/GameState.cs
 Utils/Masks/
  DynamicMask.cs
  HierarchicalMask.cs

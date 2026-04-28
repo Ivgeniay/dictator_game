@@ -3,7 +3,9 @@ using Dictator.Domain.Utils;
 namespace Dictator.Domain.Shared.LegalTerms
 {
     /// <summary>
-    /// Тип субъекта
+    /// Типобезопасная строка представляющая категорию субъектов на которых распространяется закон.
+    /// Поддерживает динамическое добавление новых категорий в процессе игры -
+    /// когда возникают новые группы населения или институты.
     /// </summary>
     public class SubjectType : StringType
     {

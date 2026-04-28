@@ -4,6 +4,12 @@ using Dictator.Domain.Shared;
 
 namespace Dictator.Domain.Utils.Masks
 {
+
+    /// <summary>
+    /// Динамическая маска включения и исключения для типизированных строковых значений.
+    /// Моделирует флаговый enum без ограничений на количество значений и с поддержкой динамического расширения в процессе игры.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class DynamicMask<T> where T : StringType
     {
         private readonly Dictionary<T, bool> _entries;
