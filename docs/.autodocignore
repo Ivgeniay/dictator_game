@@ -1,0 +1,6 @@
+.gitignore
+Gemfile
+Gemfile.lock
+_config.yaml
+/Media
+/_site

@@ -20,5 +20,6 @@ namespace Dictator.Domain.Shared.LegalTerms
         public static readonly SubjectType Police     = new SubjectType(Constants.Subjects.Police);
         public static readonly SubjectType Citizens   = new SubjectType(Constants.Subjects.Citizens);
         public static readonly SubjectType Business   = new SubjectType(Constants.Subjects.Business);
+        public static readonly SubjectType All = new SubjectType(Constants.All.Value);
     }
 }

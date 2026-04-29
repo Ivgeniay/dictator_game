@@ -25,6 +25,38 @@
                 "reveal": "always",
                 "panel": "new"
             }
+        },
+        {
+            "label": "docs: generate",
+            "type": "shell",
+            "command": "dotnet",
+            "args": [
+                "run",
+                "--project",
+                "${workspaceFolder}/Dictator.DocGen/Dictator.DocGen.csproj",
+                "--",
+                "-p",
+                "${workspaceFolder}",
+                "-i",
+                "Dictator.Domain",
+                "Dictator.Application"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "dependsOn": "build"
+        },
+        {
+            "label": "docs: generate and serve",
+            "dependsOn": [
+                "docs: generate",
+                "docs: serve"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": []
         }
+
     ]
 }

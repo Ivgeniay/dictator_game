@@ -1,6 +1,8 @@
+using Dictator.Domain.Shared.LegalTerms;
 using System.Collections.Generic;
 using System.Linq;
 using System;
+using Dictator.Domain.Shared;
 
 namespace Dictator.Domain.Laws.Registry
 {
@@ -65,7 +67,7 @@ namespace Dictator.Domain.Laws.Registry
             return GetActive()
                 .Where(r => r.Current.Statement.Subject.Children
                     .OfType<SubjectNode>()
-                    .Any(s => s.Subject.Equals(subject) || s.Subject.Equals(SubjectType.All)))
+                    .Any(s => s.Subject.Equals(subject) || s.Subject.Equals(Constants.All.Value)))
                 .ToList();
         }
         public IReadOnlyList<LawRecord> GetByAction(ActionType action)

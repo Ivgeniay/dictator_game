@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dictator.Domain", "Dictator
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dictator.TestConsole", "Dictator.TestConsole\Dictator.TestConsole.csproj", "{E5ADACF1-AFE3-40B2-9823-316392AD6C0D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dictator.DocGen", "Dictator.DocGen\Dictator.DocGen.csproj", "{1434E6EC-60E5-45C0-8E9B-5D302AD2CD37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{E5ADACF1-AFE3-40B2-9823-316392AD6C0D}.Release|x64.Build.0 = Release|Any CPU
 		{E5ADACF1-AFE3-40B2-9823-316392AD6C0D}.Release|x86.ActiveCfg = Release|Any CPU
 		{E5ADACF1-AFE3-40B2-9823-316392AD6C0D}.Release|x86.Build.0 = Release|Any CPU
+		{1434E6EC-60E5-45C0-8E9B-5D302AD2CD37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1434E6EC-60E5-45C0-8E9B-5D302AD2CD37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1434E6EC-60E5-45C0-8E9B-5D302AD2CD37}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1434E6EC-60E5-45C0-8E9B-5D302AD2CD37}.Debug|x64.Build.0 = Debug|Any CPU
+		{1434E6EC-60E5-45C0-8E9B-5D302AD2CD37}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1434E6EC-60E5-45C0-8E9B-5D302AD2CD37}.Debug|x86.Build.0 = Debug|Any CPU
+		{1434E6EC-60E5-45C0-8E9B-5D302AD2CD37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1434E6EC-60E5-45C0-8E9B-5D302AD2CD37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1434E6EC-60E5-45C0-8E9B-5D302AD2CD37}.Release|x64.ActiveCfg = Release|Any CPU
+		{1434E6EC-60E5-45C0-8E9B-5D302AD2CD37}.Release|x64.Build.0 = Release|Any CPU
+		{1434E6EC-60E5-45C0-8E9B-5D302AD2CD37}.Release|x86.ActiveCfg = Release|Any CPU
+		{1434E6EC-60E5-45C0-8E9B-5D302AD2CD37}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

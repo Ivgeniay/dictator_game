@@ -11,6 +11,24 @@
             "cwd": "${workspaceFolder}/Dictator.TestConsole",
             "console": "integratedTerminal",
             "stopAtEntry": false
+        },
+        {
+            "name": "DocGen",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "Build sln",
+            "program": "${workspaceFolder}/Dictator.DocGen/bin/Debug/net10.0/Dictator.DocGen.dll",
+            "args": [
+                "-p",
+                "${workspaceFolder}",
+                "-i",
+                "Dictator.Domain",
+                "Dictator.Application"
+            ],
+            "cwd": "${workspaceFolder}/Dictator.DocGen",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
         }
+
     ]
 }
