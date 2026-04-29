@@ -64,6 +64,7 @@ Actors/Relations/Personal/
  Sin.cs
 Actors/Types/
  Actor.cs
+ CitizenType.cs
  Dictator.cs
  Organization.cs
  Organizations/
@@ -75,22 +76,6 @@ Actors/Types/
   ProsecutionOrganization.cs
  Person.cs
  State.cs
-Laws/Bill/
- Bill.cs
- BillAmendment.cs
- BillStatement.cs
- BillStatementDiff.cs
- DiffTypes.cs
-Laws/Law/
- Law.cs
- LawFactory.cs
- LawStatement.cs
-Laws/
- Nodes/Types.cs
- Registry/
-  BillRegistry.cs
-  LawRecord.cs
-  LawRegistry.cs
 obj/Debug/netstandard2.1/
  .NETStandard,Version=v2.1.AssemblyAttributes.cs
  Dictator.Domain.AssemblyInfo.cs
@@ -99,20 +84,21 @@ Shared/
  LegalTerms/
   ActionType.cs
   CircumstanceType.cs
+  InstitutionType.cs
   RestrictionType.cs
   SubjectType.cs
+  TemporalEventType.cs
  Metrics/
   CorruptionLevel.cs
   Loyalty.cs
+Statistics/PopulationStatistics.cs
 System/GameState.cs
 Utils/Masks/
  DynamicMask.cs
  HierarchicalMask.cs
 Utils/
  RandomS.cs
- Serd/
-  NodeJsonConverter.cs
-  StringTypeJsonConverter.cs
+ Serd/StringTypeJsonConverter.cs
  StringType.cs
 
 [metadataReferences]

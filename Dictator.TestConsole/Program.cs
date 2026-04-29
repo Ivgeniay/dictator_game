@@ -1,6 +1,4 @@
-﻿using Dictator.Domain.Laws.Bill_;
-
-namespace Dictator.TestConsole
+﻿namespace Dictator.TestConsole
 {
     class Program
     {
