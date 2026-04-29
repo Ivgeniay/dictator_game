@@ -46,7 +46,7 @@
                 "reveal": "always",
                 "panel": "shared"
             },
-            "dependsOn": "build"
+            "dependsOn": "Build sln"
         },
         {
             "label": "docs: generate and serve",
@@ -55,6 +55,15 @@
                 "docs: serve"
             ],
             "dependsOrder": "sequence",
+            "problemMatcher": []
+        },
+        {
+            "label": "Copy DLLs to Client",
+            "type": "shell",
+            "command": "cp '${workspaceFolder}/Dictator.Domain/bin/Debug/netstandard2.1/Dictator.Domain.dll' '${workspaceFolder}/Dictator.UnityClient/Assets/Plugins'; cp '${workspaceFolder}/Dictator.Application/bin/Debug/netstandard2.1/Dictator.Application.dll' '${workspaceFolder}/Dictator.UnityClient/Assets/Plugins'",
+            "presentation": {
+                "reveal": "silent"
+            },
             "problemMatcher": []
         }
 
