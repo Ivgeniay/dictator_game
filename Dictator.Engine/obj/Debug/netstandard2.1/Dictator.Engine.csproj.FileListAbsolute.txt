@@ -9,3 +9,15 @@
 /Users/evgenij/Documents/programming/csharp/dictator/Dictator.Engine/obj/Debug/netstandard2.1/Dictator.Engine.pdb
 /Users/evgenij/Documents/programming/csharp/dictator/Dictator.Engine/obj/Debug/netstandard2.1/refint/Dictator.Engine.dll
 /Users/evgenij/Documents/programming/csharp/dictator/Dictator.Engine/obj/Debug/netstandard2.1/ref/Dictator.Engine.dll
+/root/programming/csharp/dictator_game/Dictator.Engine/bin/Debug/netstandard2.1/Dictator.Engine.deps.json
+/root/programming/csharp/dictator_game/Dictator.Engine/bin/Debug/netstandard2.1/Dictator.Engine.dll
+/root/programming/csharp/dictator_game/Dictator.Engine/bin/Debug/netstandard2.1/Dictator.Engine.pdb
+/root/programming/csharp/dictator_game/Dictator.Engine/obj/Debug/netstandard2.1/Dictator.Engine.GeneratedMSBuildEditorConfig.editorconfig
+/root/programming/csharp/dictator_game/Dictator.Engine/obj/Debug/netstandard2.1/Dictator.Engine.AssemblyInfoInputs.cache
+/root/programming/csharp/dictator_game/Dictator.Engine/obj/Debug/netstandard2.1/Dictator.Engine.AssemblyInfo.cs
+/root/programming/csharp/dictator_game/Dictator.Engine/obj/Debug/netstandard2.1/Dictator.Engine.csproj.CoreCompileInputs.cache
+/root/programming/csharp/dictator_game/Dictator.Engine/obj/Debug/netstandard2.1/Dictator.Engine.sourcelink.json
+/root/programming/csharp/dictator_game/Dictator.Engine/obj/Debug/netstandard2.1/Dictator.Engine.dll
+/root/programming/csharp/dictator_game/Dictator.Engine/obj/Debug/netstandard2.1/refint/Dictator.Engine.dll
+/root/programming/csharp/dictator_game/Dictator.Engine/obj/Debug/netstandard2.1/Dictator.Engine.pdb
+/root/programming/csharp/dictator_game/Dictator.Engine/obj/Debug/netstandard2.1/ref/Dictator.Engine.dll

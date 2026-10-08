@@ -1,6 +1,6 @@
 is_global = true
 build_property.RootNamespace = Dictator.Engine
-build_property.ProjectDir = /Users/evgenij/Documents/programming/csharp/dictator/Dictator.Engine/
+build_property.ProjectDir = /root/programming/csharp/dictator_game/Dictator.Engine/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false

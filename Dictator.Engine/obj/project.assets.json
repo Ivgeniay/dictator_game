@@ -8,19 +8,19 @@
     "netstandard2.1": []
   },
   "packageFolders": {
-    "/Users/evgenij/.nuget/packages/": {}
+    "/root/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/evgenij/Documents/programming/csharp/dictator/Dictator.Engine/Dictator.Engine.csproj",
+      "projectUniqueName": "/root/programming/csharp/dictator_game/Dictator.Engine/Dictator.Engine.csproj",
       "projectName": "Dictator.Engine",
-      "projectPath": "/Users/evgenij/Documents/programming/csharp/dictator/Dictator.Engine/Dictator.Engine.csproj",
-      "packagesPath": "/Users/evgenij/.nuget/packages/",
-      "outputPath": "/Users/evgenij/Documents/programming/csharp/dictator/Dictator.Engine/obj/",
+      "projectPath": "/root/programming/csharp/dictator_game/Dictator.Engine/Dictator.Engine.csproj",
+      "packagesPath": "/root/.nuget/packages/",
+      "outputPath": "/root/programming/csharp/dictator_game/Dictator.Engine/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/evgenij/.nuget/NuGet/NuGet.Config"
+        "/root/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
@@ -73,7 +73,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.401/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/opt/dotnet/sdk/10.0.400/RuntimeIdentifierGraph.json"
       }
     }
   }

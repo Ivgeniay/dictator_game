@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "wDVyjeOvaTE=",
+  "dgSpecHash": "qyt0w2UwWRI=",
   "success": true,
-  "projectFilePath": "/Users/evgenij/Documents/programming/csharp/dictator/Dictator.Engine/Dictator.Engine.csproj",
+  "projectFilePath": "/root/programming/csharp/dictator_game/Dictator.Engine/Dictator.Engine.csproj",
   "expectedPackageFiles": [
-    "/Users/evgenij/.nuget/packages/netstandard.library.ref/2.1.0/netstandard.library.ref.2.1.0.nupkg.sha512"
+    "/root/.nuget/packages/netstandard.library.ref/2.1.0/netstandard.library.ref.2.1.0.nupkg.sha512"
   ],
   "logs": []
 }

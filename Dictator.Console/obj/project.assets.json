@@ -27,19 +27,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/evgenij/.nuget/packages/": {}
+    "/root/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/evgenij/Documents/programming/csharp/dictator/Dictator.Console/Dictator.Console.csproj",
+      "projectUniqueName": "/root/programming/csharp/dictator_game/Dictator.Console/Dictator.Console.csproj",
       "projectName": "Dictator.Console",
-      "projectPath": "/Users/evgenij/Documents/programming/csharp/dictator/Dictator.Console/Dictator.Console.csproj",
-      "packagesPath": "/Users/evgenij/.nuget/packages/",
-      "outputPath": "/Users/evgenij/Documents/programming/csharp/dictator/Dictator.Console/obj/",
+      "projectPath": "/root/programming/csharp/dictator_game/Dictator.Console/Dictator.Console.csproj",
+      "packagesPath": "/root/.nuget/packages/",
+      "outputPath": "/root/programming/csharp/dictator_game/Dictator.Console/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/evgenij/.nuget/NuGet/NuGet.Config"
+        "/root/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
@@ -52,8 +52,8 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "/Users/evgenij/Documents/programming/csharp/dictator/Dictator.Engine/Dictator.Engine.csproj": {
-              "projectPath": "/Users/evgenij/Documents/programming/csharp/dictator/Dictator.Engine/Dictator.Engine.csproj"
+            "/root/programming/csharp/dictator_game/Dictator.Engine/Dictator.Engine.csproj": {
+              "projectPath": "/root/programming/csharp/dictator_game/Dictator.Engine/Dictator.Engine.csproj"
             }
           }
         }
@@ -90,7 +90,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.401/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "/opt/dotnet/sdk/10.0.400/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
