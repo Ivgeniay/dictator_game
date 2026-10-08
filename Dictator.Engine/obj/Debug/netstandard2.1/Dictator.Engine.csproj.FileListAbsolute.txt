@@ -1,0 +1,11 @@
+/Users/evgenij/Documents/programming/csharp/dictator/Dictator.Engine/bin/Debug/netstandard2.1/Dictator.Engine.deps.json
+/Users/evgenij/Documents/programming/csharp/dictator/Dictator.Engine/bin/Debug/netstandard2.1/Dictator.Engine.dll
+/Users/evgenij/Documents/programming/csharp/dictator/Dictator.Engine/bin/Debug/netstandard2.1/Dictator.Engine.pdb
+/Users/evgenij/Documents/programming/csharp/dictator/Dictator.Engine/obj/Debug/netstandard2.1/Dictator.Engine.GeneratedMSBuildEditorConfig.editorconfig
+/Users/evgenij/Documents/programming/csharp/dictator/Dictator.Engine/obj/Debug/netstandard2.1/Dictator.Engine.AssemblyInfoInputs.cache
+/Users/evgenij/Documents/programming/csharp/dictator/Dictator.Engine/obj/Debug/netstandard2.1/Dictator.Engine.AssemblyInfo.cs
+/Users/evgenij/Documents/programming/csharp/dictator/Dictator.Engine/obj/Debug/netstandard2.1/Dictator.Engine.csproj.CoreCompileInputs.cache
+/Users/evgenij/Documents/programming/csharp/dictator/Dictator.Engine/obj/Debug/netstandard2.1/Dictator.Engine.dll
+/Users/evgenij/Documents/programming/csharp/dictator/Dictator.Engine/obj/Debug/netstandard2.1/Dictator.Engine.pdb
+/Users/evgenij/Documents/programming/csharp/dictator/Dictator.Engine/obj/Debug/netstandard2.1/refint/Dictator.Engine.dll
+/Users/evgenij/Documents/programming/csharp/dictator/Dictator.Engine/obj/Debug/netstandard2.1/ref/Dictator.Engine.dll

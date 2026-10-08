@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Dictator.Console/Dictator.Console.csproj" />
+  <Project Path="Dictator.Engine/Dictator.Engine.csproj" />
+</Solution>
